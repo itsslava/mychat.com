@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy"),
+       url("/fonts/Gilroy-Regular.woff2") format("woff2"),
+       url("/fonts/Gilroy-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Gilroy"),
+       url("/fonts/Gilroy-Bold.woff2") format("woff2"),
+       url("/fonts/Gilroy-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Gilroy"),
+       url("/fonts/Gilroy-Semibold.woff2") format("woff2"),
+       url("/fonts/Gilroy-Semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Gilroy"),
+       url("/fonts/Gilroy-Light.woff2") format("woff2"),
+       url("/fonts/Gilroy-Light.woff") format("woff");
+}
+
+
+body {
+  margin: 0;
+  font-family: "Gilroy";
+  background-color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height: 100%;
+}
+
+
+.header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 82px;
+}
+
+.my-chat-title {
+  margin-top: auto;
+}
+
+.header-title {
+  margin: 0;
+}
+
+/* положении линии */
+.header-underline {
+  position: relative;
+  top: 72px;
+}
+
+p {
+  display: inline;
+}
+
+/* прижимает текст к низу */
+.no-account {
+  margin-top: auto;
+}
+
+
+/* стили ссылки */
+.sign-up-link a {
+  display: inline;
+}
+
+a:link {
+  color:#A4C6B7;
+  text-decoration: none;
+}
+a:visited {
+  color: #A4C6B7;
+  text-decoration: none;
+}
+
+/* контейнер с формой */
+.form-container{
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+}
+
+/* форма */
+.form-container form {
+  max-width:800px;
+  padding:50px 70px;
+  border-radius:10px;
+
+}
+
+/* контейнер заголовка sign in */
+.form-title {
+margin-top: 54px;
+text-align: center;
+}
+
+/* заголовок sign in */
+.form-title h2 {
+  font-weight:700;
+  font-size: 32px;
+  margin-bottom:24px;
+}
+
+/* поле ввода */
+
+.form-container .item {
+  background-color: #EDF0F1;
+  border-radius:30px;
+  margin-top: 12px;
+  margin-bottom: 24px;
+  padding-left: 21px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border: 0px solid;
+  width: 336px;
+}
+
+/* кнопка входа */
+
+.form-container .sign-in {
+  background-color:#A4C6B7;
+  color:white;
+  font-size:16px;
+  font-weight: 600;
+  border-radius:30px;
+  border:none;
+  padding:13px 61px;
+  margin-top:30px;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* кнопка отцентрована */
+
+.button {
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .form-container form {
+    padding:50px 20px;
+  }
+}
