@@ -1,0 +1,199 @@
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy"),
+       url("/fonts/Gilroy-Regular.woff2") format("woff2"),
+       url("/fonts/Gilroy-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Gilroy"),
+       url("/fonts/Gilroy-Bold.woff2") format("woff2"),
+       url("/fonts/Gilroy-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Gilroy"),
+       url("/fonts/Gilroy-Semibold.woff2") format("woff2"),
+       url("/fonts/Gilroy-Semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Gilroy"),
+       url("/fonts/Gilroy-Light.woff2") format("woff2"),
+       url("/fonts/Gilroy-Light.woff") format("woff");
+}
+
+
+body {
+  font-family: "Gilroy", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* общий контейнер */
+
+.container  {
+  display: flex;
+  position: relative;
+  width: 1396px;
+  max-width: 100%;
+  height: calc(100vh - 40px);
+  background-color: #fff;
+  border: 2px solid #E5E3E3;
+}
+
+/* панель входящих */
+
+.container .inbox {
+  position:relative;
+  flex: 25%;
+  background-color: #EDF0F1;
+  border-right: 2px solid #E5E3E3;
+}
+
+/* панель окна чата */
+
+.container .message-window {
+  position:relative;
+  flex: 75%;
+  background-color: #fff;
+}
+
+/* хедер входящих */
+
+.inbox .header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color:#fff;
+  /*
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  */
+}
+
+/* заголовок chats */
+
+.chats-title h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+/* контейнер chats */
+
+.chats-title {
+  position: relative;
+  overflow: hidden;
+  top: 16px;
+  left: 18px;
+}
+
+/* контейнер поиска */
+
+.search {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* контейнер поля поиска */
+
+.search .search-field
+{
+  width: 100%;
+  padding-left: 15px;
+}
+
+/* поле ввода */
+
+.search .search-field input {
+  width: 84%;
+  outline: none;
+  border: none;
+  background: #EDF0F1;
+  padding: 6px;
+  height: 26px;
+  border-radius: 30px;
+  font-size: 14px;
+  padding-left: 34px;
+}
+
+/* плейсхолдер поля поиска */
+
+.search .search-field input::placeholder {
+  color: #A3A3A4;
+  font-weight: 300;
+}
+
+/* иконка поля поиска */
+
+.search .search-field ion-icon {
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  font-size: 1.3em;
+  color: #A3A3A4;
+}
+
+.chat-list {
+  position: relative;
+  height: calc(100% - 110px);
+  overflow-y: auto;
+  background-color: #EDF0F1;
+}
+
+.chat-list .chat-block {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+.chat-list .chat-block .img-box {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.img-av {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
