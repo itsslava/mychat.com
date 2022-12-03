@@ -35,17 +35,20 @@
 }
 
 
-body {
+* {
   font-family: "Gilroy", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
-
+/*
 p {
   margin: 0;
 }
@@ -53,6 +56,7 @@ p {
 h4 {
   margin: 0;
 }
+*/
 
 /* общий контейнер */
 
@@ -179,6 +183,8 @@ h4 {
   color: #A3A3A4;
 }
 
+/* контейнер списка чатов */
+
 .chat-list {
   position: relative;
   height: calc(100% - 110px);
@@ -189,6 +195,8 @@ h4 {
   justify-content: center;
   */
 }
+
+/* блок чата */
 
 .chat-list .chat-block {
   position: relative;
@@ -207,28 +215,28 @@ h4 {
   border-radius: 9px;
 }
 
+/* стили активного блока чата */
+
 .chat-list .chat-block.active {
   border: 3px solid #A4C6B7;
-  width: calc(90% - 6px);
+  width: 90%;
 }
 
-.chat-list .chat-block:hover {
+/* поведение блока чата при наведении */
+
+.chat-list .chat-block:hover,
+.chat-list .chat-block:hover .message-preview p,
+.chat-list .chat-block:hover .chat-details .chat-head .time
+{
   background-color: #A4C6B7;
   color: #fff;
-  }
-
-.chat-list .chat-block:hover .message-preview p {
-    color: #fff;
-  }
-
-.chat-list .chat-block:hover .chat-details .chat-head .time {
-      color: #fff;
   }
 
 .chat-list .chat-block:hover .message-preview b{
     background-color: #fff;
 }
 
+/* аватарка блока чата */
 
 .chat-list .chat-block .img-box {
   position: relative;
@@ -238,13 +246,16 @@ h4 {
   border-radius: 50%;
   margin-right: 10px;
   margin-left: 14px;
-
 }
+
+/* контейнер наполнения блока чата */
 
 .chat-list .chat-block .chat-details {
   position: relative;
   width: 100%;
 }
+
+/* контейнер названия чата */
 
 .chat-list .chat-block .chat-details .chat-head {
   display: flex;
@@ -252,11 +263,14 @@ h4 {
   margin-bottom: 5px;
 }
 
+/* название чата */
 
 .chat-list .chat-block .chat-details .chat-head h4 {
   font-size: 1.1em;
   font-weight: 600;
 }
+
+/* время сообщения в блоке чата */
 
 .chat-list .chat-block .chat-details .chat-head .time {
   font-size: 0.9em;
@@ -266,11 +280,15 @@ h4 {
   margin-right: 14px;
 }
 
+/* контейнер превью текста сообщения */
+
 .message-preview {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+/* стиль превью текста сообщения */
 
 .message-preview p {
   color: #8B8A8A;
@@ -281,6 +299,8 @@ h4 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* уведомление о непрочитанном сообщении */
 
 .message-preview b {
   background-color: #A4C6B7;
@@ -295,3 +315,193 @@ h4 {
   font-size: 0.8em;
 }
 
+/* панель чата */
+
+.message-window .header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 110px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 3px 12px -0.5px rgba(50, 50, 50, 0.15);
+  -moz-box-shadow:    0px 3px 12px -0.5px rgba(50, 50, 50, 0.15);
+  box-shadow:         0px 3px 12px -0.5px rgba(50, 50, 50, 0.15);
+  /*
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  */
+}
+
+/* аватарка в хедере панели чата */
+
+.message-window .header .img-box {
+  position: relative;
+  min-width: 74px;
+  height: 74px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 48px;
+  margin-top: 16px;
+}
+
+/* имя отправителя в хедере панели чата */
+
+.message-window .chat-name h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 42px;
+}
+
+/* статус онлайн в хедере панели чата */
+
+.message-window .chat-name span {
+  display: block;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: #979797;
+  margin-top: 3px;
+}
+
+/* иконка настроек в хедере панели чата */
+
+.header ion-icon {
+  color: #A4C6B7;
+  margin: 26px 48px 26px auto;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* окно чата */
+
+.chat-box {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 180px);
+  padding: 50px 50px 15px 50px;
+  overflow-y: auto;
+}
+
+/* стиль контейнера сообщений */
+
+.message {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 12px 0;
+}
+
+/* стиль текста сообщений */
+
+.message p {
+  position: relative;
+  right: 0;
+  text-align: right;
+  max-width: 65%;
+  padding: 12px;
+  border-radius: 16px;
+  font-size: 0.9em;
+}
+
+/* время отправки сообщения */
+
+.message p span {
+  color: #fff;
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85em;
+  opacity: 0.5;
+}
+
+/* отправленные сообщения, стили */
+
+.sent-messages {
+  justify-content: flex-end;
+
+}
+
+.sent-messages p {
+  color: #fff;
+  background: #A4C6B7;
+}
+
+/* полученные сообщения, стили */
+
+.recived-messages  {
+  justify-content: flex-start ;
+}
+
+.recived-messages p {
+  background: #F0F0F0;
+  text-align: left;
+}
+
+.recived-messages p span{
+  color: black;
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85em;
+  opacity: 0.5;
+}
+
+/* дата в истории сообщений */
+
+.chat-date {
+  text-align: center;
+  color: #979797;
+  font-size: 1em;
+}
+
+/* поле ввода сообщения */
+
+.chatbox-input {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  -webkit-box-shadow: 0px -3px 12px -0.5px rgba(50, 50, 50, 0.15);
+  -moz-box-shadow:    0px -3px 12px -0.5px rgba(50, 50, 50, 0.15);
+  box-shadow:         0px -3px 12px -0.5px rgba(50, 50, 50, 0.15);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbox-input .ion-icon {
+  position: relative;
+  cursor: pointer;
+  background-color: #A4C6B7;
+  width: 55px;
+  height: 45px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.chatbox-input ion-icon {
+  margin-top: 7px;
+  color: #fff;
+  font-size: 1.9em;
+}
+
+.chatbox-input .ion-icon:nth-child(1) {
+  margin-right: 15px;
+}
+
+.chatbox-input .ion-icon:nth-child(2) {
+  margin-right: 15px;
+}
+
+.chatbox-input input {
+  position: relative;
+  width: 90%;
+  height: 45px;
+  margin: 0 20px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #EDF0F1;
+  font-size: 0.8em;
+}
