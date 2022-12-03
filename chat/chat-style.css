@@ -469,6 +469,8 @@ h4 {
   align-items: center;
 }
 
+/* контейнер иконок */
+
 .chatbox-input .ion-icon {
   position: relative;
   cursor: pointer;
@@ -478,6 +480,8 @@ h4 {
   border-radius: 10px;
   text-align: center;
 }
+
+/* иконки */
 
 .chatbox-input ion-icon {
   margin-top: 7px;
@@ -492,6 +496,8 @@ h4 {
 .chatbox-input .ion-icon:nth-child(2) {
   margin-right: 15px;
 }
+
+/* инпут ввода сообщений */
 
 .chatbox-input input {
   position: relative;
